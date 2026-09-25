@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar canchas - CanchaYa</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Administrar canchas</h1>
+        <p>Crear, revisar y eliminar canchas del sistema.</p>
+    </header>
+
+    <nav aria-label="Navegación del administrador">
+        <a href="admin.html">Inicio</a>
+        <a href="admin-canchas.html">Canchas</a>
+        <a href="admin-reservas.html">Reservas</a>
+        <a href="admin-usuarios.html">Usuarios / Dueños</a>
+        <a href="admin-clientes.html">Clientes</a>
+        <a href="login.html">Cerrar sesión</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Canchas registradas</h2>
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Tipo</th>
+                            <th>Ubicación</th>
+                            <th>Dueño</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Cancha Central</td><td>Fútbol</td><td>Santiago Centro</td><td>Dueño 1</td><td>$25.000</td></tr>
+                        <tr><td>Cancha Norte</td><td>Pádel</td><td>Independencia</td><td>Dueño 1</td><td>$18.000</td></tr>
+                        <tr><td>Cancha Sur</td><td>Multiuso</td><td>San Miguel</td><td>Dueño 2</td><td>$20.000</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Crear nueva cancha</h2>
+            <form id="formNuevaCancha" novalidate>
+                <div class="campo">
+                    <label for="nuevoDueno">Usuario dueño</label>
+                    <select id="nuevoDueno">
+                        <option value="">Seleccione un dueño</option>
+                        <option value="dueno1">Dueño 1</option>
+                        <option value="dueno2">Dueño 2</option>
+                    </select>
+                    <p class="error" id="errorNuevoDueno"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="nuevoNombreCancha">Nombre</label>
+                    <input type="text" id="nuevoNombreCancha" maxlength="80">
+                    <p class="ayuda">Entre 3 y 80 caracteres.</p>
+                    <p class="error" id="errorNuevoNombre"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="nuevoTipoCancha">Tipo de cancha</label>
+                    <select id="nuevoTipoCancha">
+                        <option value="">Seleccione un tipo</option>
+                        <option value="futbol">Fútbol</option>
+                        <option value="padel">Pádel</option>
+                        <option value="multiuso">Multiuso</option>
+                    </select>
+                    <p class="error" id="errorNuevoTipo"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="nuevaUbicacionCancha">Ubicación</label>
+                    <input type="text" id="nuevaUbicacionCancha" maxlength="100">
+                    <p class="error" id="errorNuevaUbicacion"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="nuevoValorCancha">Valor por hora</label>
+                    <input type="number" id="nuevoValorCancha" min="1">
+                    <p class="error" id="errorNuevoValor"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="nuevosHorariosCancha">Horarios</label>
+                    <input type="text" id="nuevosHorariosCancha" maxlength="100" placeholder="Ejemplo: 17:00, 18:00, 19:00">
+                    <p class="ayuda">Escriba los horarios separados por coma.</p>
+                    <p class="error" id="errorNuevosHorarios"></p>
+                </div>
+
+                <button type="submit">Guardar nueva cancha</button>
+                <p class="mensaje-ok" id="mensajeNuevaCancha"></p>
+            </form>
+        </section>
+
+
+        <section>
+            <h2>Modificar horarios y disponibilidad</h2>
+            <form id="formEditarCancha" novalidate>
+                <div class="campo">
+                    <label for="canchaDueno">Cancha</label>
+                    <select id="canchaDueno">
+                        <option value="">Seleccione una cancha</option>
+                        <option value="central">Cancha Central</option>
+                        <option value="norte">Cancha Norte</option>
+                        <option value="sur">Cancha Sur</option>
+                    </select>
+                    <p class="error" id="errorCanchaDueno"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="horariosDueno">Horarios</label>
+                    <input type="text" id="horariosDueno" maxlength="100" placeholder="Ejemplo: 17:00, 18:00, 19:00">
+                    <p class="ayuda">Escriba los horarios separados por coma.</p>
+                    <p class="error" id="errorHorariosDueno"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="disponibilidadDueno">Disponibilidad</label>
+                    <select id="disponibilidadDueno">
+                        <option value="">Seleccione una opción</option>
+                        <option value="disponible">Disponible</option>
+                        <option value="no-disponible">No disponible</option>
+                    </select>
+                    <p class="error" id="errorDisponibilidadDueno"></p>
+                </div>
+
+                <button type="submit">Guardar cambios</button>
+                <p class="mensaje-ok" id="mensajeCanchaDueno"></p>
+            </form>
+        </section>
+
+        <section>
+            <h2>Eliminar cancha</h2>
+            <form id="formEliminarCancha" novalidate>
+                <div class="campo">
+                    <label for="canchaEliminar">Cancha</label>
+                    <select id="canchaEliminar">
+                        <option value="">Seleccione una cancha</option>
+                        <option value="central">Cancha Central</option>
+                        <option value="norte">Cancha Norte</option>
+                        <option value="sur">Cancha Sur</option>
+                    </select>
+                    <p class="error" id="errorCanchaEliminar"></p>
+                </div>
+                <button type="submit" class="boton-rojo">Eliminar cancha</button>
+                <p class="mensaje-ok" id="mensajeEliminarCancha"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Arriendo de canchas CanchaYa · Renca, Región Metropolitana</p>
+    </footer>
+
+    <script src="js/validaciones.js"></script>
+</body>
+</html>

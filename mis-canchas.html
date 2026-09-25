@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis canchas - CanchaYa</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Mis canchas</h1>
+        <p>Consulta y actualiza la información básica de tus canchas.</p>
+    </header>
+
+    <nav aria-label="Navegación del dueño">
+        <a href="dueno.html">Inicio</a>
+        <a href="mis-canchas.html">Mis canchas</a>
+        <a href="reservas-dueno.html">Reservas recibidas</a>
+        <a href="login.html">Cerrar sesión</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Canchas asignadas</h2>
+            <div class="contenedor-tarjetas">
+                <article class="tarjeta">
+                    <img src="img/cancha-futbol.svg" alt="Cancha Central de fútbol">
+                    <h3>Cancha Central</h3>
+                    <p>Fútbol · Santiago Centro</p>
+                    <p>Horarios: 17:00, 18:00, 19:00 y 20:00.</p>
+                    <p class="estado-ok">Disponible</p>
+                </article>
+
+                <article class="tarjeta">
+                    <img src="img/cancha-padel.svg" alt="Cancha Norte de pádel">
+                    <h3>Cancha Norte</h3>
+                    <p>Pádel · Independencia</p>
+                    <p>Horarios: 16:00, 17:00, 18:00 y 19:00.</p>
+                    <p class="estado-ok">Disponible</p>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h2>Modificar horarios y disponibilidad</h2>
+            <form id="formEditarCancha" novalidate>
+                <div class="campo">
+                    <label for="canchaDueno">Cancha</label>
+                    <select id="canchaDueno">
+                        <option value="">Seleccione una cancha</option>
+                        <option value="central">Cancha Central</option>
+                        <option value="norte">Cancha Norte</option>
+                    </select>
+                    <p class="error" id="errorCanchaDueno"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="horariosDueno">Horarios</label>
+                    <input type="text" id="horariosDueno" maxlength="100" placeholder="Ejemplo: 17:00, 18:00, 19:00">
+                    <p class="ayuda">Escriba los horarios separados por coma.</p>
+                    <p class="error" id="errorHorariosDueno"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="disponibilidadDueno">Disponibilidad</label>
+                    <select id="disponibilidadDueno">
+                        <option value="">Seleccione una opción</option>
+                        <option value="disponible">Disponible</option>
+                        <option value="no-disponible">No disponible</option>
+                    </select>
+                    <p class="error" id="errorDisponibilidadDueno"></p>
+                </div>
+
+                <button type="submit">Guardar cambios</button>
+                <p class="mensaje-ok" id="mensajeCanchaDueno"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Arriendo de canchas CanchaYa · Renca, Región Metropolitana</p>
+    </footer>
+
+    <script src="js/validaciones.js"></script>
+</body>
+</html>

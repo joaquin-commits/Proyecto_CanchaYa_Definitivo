@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas recibidas - CanchaYa</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Reservas recibidas</h1>
+        <p>Revisa las reservas correspondientes a tus canchas.</p>
+    </header>
+
+    <nav aria-label="Navegación del dueño">
+        <a href="dueno.html">Inicio</a>
+        <a href="mis-canchas.html">Mis canchas</a>
+        <a href="reservas-dueno.html">Reservas recibidas</a>
+        <a href="login.html">Cerrar sesión</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Listado de reservas</h2>
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cancha</th>
+                            <th>Cliente</th>
+                            <th>Fecha</th>
+                            <th>Horario</th>
+                            <th>Estado</th>
+                            <th>Pago</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cancha Central</td>
+                            <td>Cliente 1</td>
+                            <td>10/10/2026</td>
+                            <td>18:00</td>
+                            <td class="estado-ok">Confirmada</td>
+                            <td class="estado-ok">Pagada</td>
+                        </tr>
+                        <tr>
+                            <td>Cancha Norte</td>
+                            <td>Cliente 2</td>
+                            <td>12/10/2026</td>
+                            <td>17:00</td>
+                            <td class="estado-ok">Confirmada</td>
+                            <td class="estado-ok">Pagada</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Cancelar reserva</h2>
+            <form id="formCancelarReserva" novalidate>
+                <div class="campo">
+                    <label for="reservaCancelar">Reserva</label>
+                    <select id="reservaCancelar">
+                        <option value="">Seleccione una reserva</option>
+                        <option value="r1">Cancha Central - Cliente 1 - 10/10/2026</option>
+                        <option value="r2">Cancha Norte - Cliente 2 - 12/10/2026</option>
+                    </select>
+                    <p class="error" id="errorReservaCancelar"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="motivoCancelacion">Motivo</label>
+                    <textarea id="motivoCancelacion" maxlength="200"></textarea>
+                    <p class="ayuda">Máximo 200 caracteres.</p>
+                    <p class="error" id="errorMotivoCancelacion"></p>
+                </div>
+
+                <button type="submit" class="boton-rojo">Cancelar reserva</button>
+                <p class="mensaje-ok" id="mensajeCancelacion"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Arriendo de canchas CanchaYa · Renca, Región Metropolitana</p>
+    </footer>
+
+    <script src="js/validaciones.js"></script>
+</body>
+</html>

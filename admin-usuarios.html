@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios dueños - CanchaYa</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Usuarios / Dueños</h1>
+        <p>Crear y revisar usuarios dueños de cancha.</p>
+    </header>
+
+    <nav aria-label="Navegación del administrador">
+        <a href="admin.html">Inicio</a>
+        <a href="admin-canchas.html">Canchas</a>
+        <a href="admin-reservas.html">Reservas</a>
+        <a href="admin-usuarios.html">Usuarios / Dueños</a>
+        <a href="admin-clientes.html">Clientes</a>
+        <a href="login.html">Cerrar sesión</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Crear usuario dueño</h2>
+            <form id="formNuevoDueno" novalidate>
+                <div class="campo">
+                    <label for="nombreNuevoDueno">Nombre</label>
+                    <input type="text" id="nombreNuevoDueno" maxlength="50" autocomplete="name">
+                    <p class="ayuda">Entre 2 y 50 caracteres.</p>
+                    <p class="error" id="errorNombreNuevoDueno"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="correoNuevoDueno">Correo electrónico</label>
+                    <input type="email" id="correoNuevoDueno" maxlength="100" autocomplete="email">
+                    <p class="error" id="errorCorreoNuevoDueno"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="claveNuevoDueno">Contraseña</label>
+                    <input type="password" id="claveNuevoDueno" minlength="4" maxlength="10" autocomplete="new-password">
+                    <p class="ayuda">Entre 4 y 10 caracteres.</p>
+                    <p class="error" id="errorClaveNuevoDueno"></p>
+                </div>
+
+                <button type="submit">Crear usuario dueño</button>
+                <p class="mensaje-ok" id="mensajeNuevoDueno"></p>
+            </form>
+        </section>
+
+        <section>
+            <h2>Usuarios dueños registrados</h2>
+            <div class="tabla-contenedor">
+                <table>
+                    <thead><tr><th>Nombre</th><th>Correo</th><th>Canchas asignadas</th></tr></thead>
+                    <tbody>
+                        <tr><td>Dueño 1</td><td>dueno1@canchas.cl</td><td>Cancha Central, Cancha Norte</td></tr>
+                        <tr><td>Dueño 2</td><td>dueno2@canchas.cl</td><td>Cancha Sur</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Arriendo de canchas CanchaYa · Renca, Región Metropolitana</p>
+    </footer>
+
+    <script src="js/validaciones.js"></script>
+</body>
+</html>

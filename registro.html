@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - CanchaYa</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Registro de usuario</h1>
+        <p>Crea una cuenta de cliente o dueño de cancha.</p>
+    </header>
+
+    <nav aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="login.html">Iniciar sesión</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Crear cuenta</h2>
+            <form id="formRegistro" novalidate>
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" maxlength="50" autocomplete="given-name">
+                    <p class="ayuda">Entre 2 y 50 caracteres.</p>
+                    <p class="error" id="errorNombre"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" maxlength="50" autocomplete="family-name">
+                    <p class="ayuda">Entre 2 y 50 caracteres.</p>
+                    <p class="error" id="errorApellido"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" maxlength="100" autocomplete="email">
+                    <p class="ayuda">Ejemplo: nombre@correo.cl</p>
+                    <p class="error" id="errorCorreo"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="clave">Contraseña</label>
+                    <input type="password" id="clave" name="clave" minlength="4" maxlength="10" autocomplete="new-password">
+                    <p class="ayuda">Debe contener entre 4 y 10 caracteres.</p>
+                    <p class="error" id="errorClave"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="repetirClave">Confirmar contraseña</label>
+                    <input type="password" id="repetirClave" name="repetirClave" minlength="4" maxlength="10" autocomplete="new-password">
+                    <p class="ayuda">Debe coincidir con la contraseña anterior.</p>
+                    <p class="error" id="errorRepetirClave"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="tipo">Tipo de perfil</label>
+                    <select id="tipo" name="tipo">
+                        <option value="">Seleccione una opción</option>
+                        <option value="cliente">Cliente</option>
+                        <option value="dueno">Usuario / Dueño de cancha</option>
+                    </select>
+                    <p class="error" id="errorTipo"></p>
+                </div>
+
+                <button type="submit">Registrarse</button>
+                <p class="mensaje-ok" id="mensajeRegistro"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Arriendo de canchas CanchaYa · Renca, Región Metropolitana</p>
+    </footer>
+
+    <script src="js/validaciones.js"></script>
+</body>
+</html>

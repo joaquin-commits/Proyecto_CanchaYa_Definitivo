@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - CanchaYa</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Contacto</h1>
+        <p>Envíanos una consulta mediante el formulario.</p>
+    </header>
+
+    <nav aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="registro.html">Registrarse</a>
+        <a href="login.html">Iniciar sesión</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Formulario de contacto</h2>
+            <form id="formContacto" novalidate>
+                <div class="campo">
+                    <label for="nombreContacto">Nombre</label>
+                    <input type="text" id="nombreContacto" maxlength="100" autocomplete="name">
+                    <p class="ayuda">Máximo 100 caracteres.</p>
+                    <p class="error" id="errorNombreContacto"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="correoContacto">Correo electrónico</label>
+                    <input type="email" id="correoContacto" maxlength="100" autocomplete="email">
+                    <p class="ayuda">Ejemplo: nombre@correo.cl</p>
+                    <p class="error" id="errorCorreoContacto"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="motivoContacto">Motivo</label>
+                    <select id="motivoContacto">
+                        <option value="">Seleccione una opción</option>
+                        <option value="reserva">Consulta por reserva</option>
+                        <option value="cancha">Consulta por cancha</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    <p class="error" id="errorMotivoContacto"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="mensajeContacto">Mensaje</label>
+                    <textarea id="mensajeContacto" maxlength="500"></textarea>
+                    <p class="ayuda">Máximo 500 caracteres.</p>
+                    <p class="error" id="errorMensajeContacto"></p>
+                </div>
+
+                <button type="submit">Enviar mensaje</button>
+                <p class="mensaje-ok" id="mensajeContactoOk"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Arriendo de canchas CanchaYa · Renca, Región Metropolitana</p>
+    </footer>
+
+    <script src="js/validaciones.js"></script>
+</body>
+</html>

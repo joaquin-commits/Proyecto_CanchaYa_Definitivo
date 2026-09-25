@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis reservas - CanchaYa</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Mis reservas</h1>
+        <p>Consulta las reservas realizadas por el cliente.</p>
+    </header>
+
+    <nav aria-label="Navegación del cliente">
+        <a href="cliente.html">Buscar canchas</a>
+        <a href="reservar.html">Reservar</a>
+        <a href="mis-reservas.html">Mis reservas</a>
+        <a href="login.html">Cerrar sesión</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Reservas registradas</h2>
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cancha</th>
+                            <th>Fecha</th>
+                            <th>Horario</th>
+                            <th>Valor</th>
+                            <th>Estado</th>
+                            <th>Pago</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cancha Central</td>
+                            <td>10/10/2026</td>
+                            <td>18:00</td>
+                            <td>$25.000</td>
+                            <td class="estado-ok">Confirmada</td>
+                            <td class="estado-ok">Pagada</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Cancelar una reserva</h2>
+            <form id="formCancelarReserva" novalidate>
+                <div class="campo">
+                    <label for="reservaCancelar">Reserva</label>
+                    <select id="reservaCancelar">
+                        <option value="">Seleccione una reserva</option>
+                        <option value="r1">Cancha Central - 10/10/2026 - 18:00</option>
+                    </select>
+                    <p class="error" id="errorReservaCancelar"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="motivoCancelacion">Motivo</label>
+                    <textarea id="motivoCancelacion" maxlength="200"></textarea>
+                    <p class="ayuda">Máximo 200 caracteres. La regla del proyecto permite cancelar hasta el día anterior.</p>
+                    <p class="error" id="errorMotivoCancelacion"></p>
+                </div>
+
+                <button type="submit" class="boton-rojo">Solicitar cancelación</button>
+                <p class="mensaje-ok" id="mensajeCancelacion"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Arriendo de canchas CanchaYa · Renca, Región Metropolitana</p>
+    </footer>
+
+    <script src="js/validaciones.js"></script>
+</body>
+</html>

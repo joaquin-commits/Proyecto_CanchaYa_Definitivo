@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar cancha - CanchaYa</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Reservar cancha</h1>
+        <p>La reserva queda confirmada solamente después del pago simulado.</p>
+    </header>
+
+    <nav aria-label="Navegación del cliente">
+        <a href="cliente.html">Buscar canchas</a>
+        <a href="reservar.html">Reservar</a>
+        <a href="mis-reservas.html">Mis reservas</a>
+        <a href="login.html">Cerrar sesión</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Nueva reserva</h2>
+            <form id="formReserva" novalidate>
+                <div class="campo">
+                    <label for="cancha">Cancha</label>
+                    <select id="cancha" name="cancha">
+                        <option value="">Seleccione una cancha</option>
+                        <option value="central">Cancha Central - Fútbol - $25.000</option>
+                        <option value="norte">Cancha Norte - Pádel - $18.000</option>
+                        <option value="sur">Cancha Sur - Multiuso - $20.000</option>
+                    </select>
+                    <p class="error" id="errorCancha"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="fecha">Fecha</label>
+                    <input type="date" id="fecha" name="fecha">
+                    <p class="ayuda">La fecha no puede estar en el pasado.</p>
+                    <p class="error" id="errorFecha"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="horario">Horario disponible</label>
+                    <select id="horario" name="horario">
+                        <option value="">Seleccione un horario</option>
+                        <option value="17:00">17:00</option>
+                        <option value="18:00">18:00</option>
+                        <option value="19:00">19:00</option>
+                        <option value="20:00">20:00</option>
+                    </select>
+                    <p class="error" id="errorHorario"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="metodoPago">Método de pago simulado</label>
+                    <select id="metodoPago" name="metodoPago">
+                        <option value="">Seleccione una opción</option>
+                        <option value="debito">Tarjeta de débito</option>
+                        <option value="credito">Tarjeta de crédito</option>
+                    </select>
+                    <p class="ayuda">No se solicitan datos bancarios reales.</p>
+                    <p class="error" id="errorMetodoPago"></p>
+                </div>
+
+                <article class="resumen">
+                    <h3>Regla de reserva</h3>
+                    <p>Primero se valida el formulario y se simula el pago. Solo después se informa que la reserva queda confirmada.</p>
+                </article>
+
+                <button type="submit">Pagar reserva</button>
+                <p class="mensaje-ok" id="mensajeReserva"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Arriendo de canchas CanchaYa · Renca, Región Metropolitana</p>
+    </footer>
+
+    <script src="js/validaciones.js"></script>
+</body>
+</html>

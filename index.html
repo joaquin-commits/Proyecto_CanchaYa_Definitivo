@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CanchaYa - Reserva de canchas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>CanchaYa</h1>
+        <p>Encuentra y reserva canchas deportivas de forma simple.</p>
+    </header>
+
+    <nav aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="#canchas">Canchas</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="registro.html">Registrarse</a>
+        <a href="login.html">Iniciar sesión</a>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h2>Reserva tu cancha en pocos pasos</h2>
+            <p>Consulta opciones disponibles, selecciona una fecha y horario, y realiza un pago simulado para confirmar la reserva.</p>
+            <a class="boton" href="registro.html">Crear cuenta</a>
+            <a class="boton boton-secundario" href="login.html">Ingresar</a>
+        </section>
+
+        <section id="canchas">
+            <h2>Canchas destacadas</h2>
+            <div class="contenedor-tarjetas">
+                <article class="tarjeta">
+                    <img src="img/cancha-futbol.svg" alt="Ilustración de una cancha de fútbol">
+                    <h3>Cancha Central</h3>
+                    <p>Fútbol · Santiago Centro</p>
+                    <p><strong>$25.000 por hora</strong></p>
+                    <a class="boton" href="detalle-cancha.html">Ver detalle</a>
+                </article>
+
+                <article class="tarjeta">
+                    <img src="img/cancha-padel.svg" alt="Ilustración de una cancha de pádel">
+                    <h3>Cancha Norte</h3>
+                    <p>Pádel · Independencia</p>
+                    <p><strong>$18.000 por hora</strong></p>
+                    <a class="boton" href="detalle-cancha.html">Ver detalle</a>
+                </article>
+
+                <article class="tarjeta">
+                    <img src="img/cancha-multiuso.svg" alt="Ilustración de una cancha multiuso">
+                    <h3>Cancha Sur</h3>
+                    <p>Multiuso · San Miguel</p>
+                    <p><strong>$20.000 por hora</strong></p>
+                    <a class="boton" href="detalle-cancha.html">Ver detalle</a>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h2>¿Cómo funciona CanchaYa?</h2>
+            <div class="video-contenedor">
+                <video controls preload="metadata">
+                    <source src="video/canchaya-presentacion.mp4" type="video/mp4">
+                    Tu navegador no permite reproducir este video.
+                </video>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Arriendo de canchas CanchaYa · Renca, Región Metropolitana</p>
+    </footer>
+</body>
+</html>

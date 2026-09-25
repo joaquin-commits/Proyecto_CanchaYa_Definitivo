@@ -1,0 +1,29 @@
+PROYECTO CANCHAYA - EVALUACIÓN PARCIAL 1 DSY1104
+
+INICIO
+Abrir index.html en el navegador.
+No requiere servidor, backend, base de datos, API ni frameworks.
+
+OBJETIVO TÉCNICO
+- HTML5 semántico y navegación entre páginas.
+- CSS personalizado en archivo externo.
+- Diseño responsive sencillo.
+- JavaScript básico concentrado en validaciones de formularios.
+- Mensajes de error y sugerencias personalizados.
+
+IMPORTANTE
+Los registros, pagos, modificaciones y eliminaciones son demostrativos.
+No se utiliza localStorage ni se simula una base de datos.
+
+CUENTAS DE DEMOSTRACIÓN
+Cliente
+Correo: cliente1@canchas.cl
+Contraseña: 1234
+
+Dueño
+Correo: dueno1@canchas.cl
+Contraseña: 1234
+
+Administrador
+Correo: admin@canchas.cl
+Contraseña: admin123
