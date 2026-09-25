@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#c78354"/>
+  <rect x="80" y="45" width="640" height="360" fill="#b86f45" stroke="white" stroke-width="8"/>
+  <circle cx="400" cy="225" r="55" fill="none" stroke="white" stroke-width="7"/>
+  <line x1="400" y1="45" x2="400" y2="405" stroke="white" stroke-width="7"/>
+  <text x="400" y="235" text-anchor="middle" font-family="Arial" font-size="32" fill="#4a2515">MULTIUSO</text>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#8dc7d8"/>
+  <rect x="110" y="50" width="580" height="350" fill="#4f9f86" stroke="white" stroke-width="8"/>
+  <line x1="400" y1="50" x2="400" y2="400" stroke="white" stroke-width="6"/>
+  <line x1="110" y1="225" x2="690" y2="225" stroke="#263238" stroke-width="8"/>
+  <text x="400" y="120" text-anchor="middle" font-family="Arial" font-size="34" fill="white">PÁDEL</text>
+</svg>

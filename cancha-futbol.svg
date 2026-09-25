@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#6fa85f"/>
+  <rect x="70" y="40" width="660" height="370" fill="none" stroke="white" stroke-width="8"/>
+  <line x1="400" y1="40" x2="400" y2="410" stroke="white" stroke-width="8"/>
+  <circle cx="400" cy="225" r="60" fill="none" stroke="white" stroke-width="8"/>
+  <text x="400" y="230" text-anchor="middle" font-family="Arial" font-size="34" fill="#173d28">FÚTBOL</text>
+</svg>
